@@ -55,11 +55,6 @@ void DataBuilder::reduce(WordCount &result, const WordCount &w)
 
 WordCount DataBuilder::countWords(const QString &line)
 {
-    const int work = 1000 * 1000 * 40;
-    volatile int v = 0;
-    for (int j = 0; j < work; ++j)
-        ++v;
-
     WordCount wordCount;
 
     auto words =  line.split(QRegExp("\\s+"), QString::SkipEmptyParts);
